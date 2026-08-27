@@ -108,7 +108,13 @@ a {
 }
 
 .phone-card {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--line);
+  background: #f7f7f7;
 }
 
 .phone-card p {
@@ -826,6 +832,10 @@ legend {
   .badge {
     top: 10px;
     right: 10px;
+  }
+
+  .filter-item select {
+    font-size: 14px;
   }
 
   .filters {
