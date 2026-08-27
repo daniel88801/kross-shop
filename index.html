@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#111111" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>KROSS — Men's Trainers &amp; Shoes</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23111' width='32' height='32'/><path stroke='%23fff' stroke-width='3' d='M8 8l16 16M24 8L8 24'/></svg>" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <div class="demo-bar">Сайт сделан для примера моих работ. Это демо-каталог, не настоящий магазин.</div>
+        <div class="promo">
+          <p>
+            Just Landed: The Kross Apex.
+            <button class="link" data-open="promo">Learn More</button>
+          </p>
+          <div class="promo-links">
+            <button class="text-btn" data-open="signin">Sign In</button>
+            <button class="text-btn" data-open="join">Join Us</button>
+            <button class="text-btn" data-open="help">Help</button>
+          </div>
+        </div>
+
+        <header class="header">
+          <a class="logo" href="#" aria-label="KROSS home">
+            <svg viewBox="0 0 36 24" aria-hidden="true">
+              <path d="M6 4 L18 12 L6 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" />
+              <path d="M16 4 L30 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" />
+            </svg>
+          </a>
+
+          <nav class="nav" id="main-nav">
+            <button class="nav-close" type="button" id="nav-close">Close</button>
+            <button data-nav="new">New Releases</button>
+            <button class="is-active" data-nav="men">Men</button>
+            <button data-nav="women">Women</button>
+            <button data-nav="kids">Kids</button>
+            <button data-nav="sale">Sale</button>
+            <button data-nav="collections">Collections</button>
+          </nav>
+
+          <div class="header-tools">
+            <button class="icon-btn" data-open="search" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="6.5" />
+                <path d="M16 16l4.5 4.5" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button class="icon-btn" data-open="wishlist" aria-label="Wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 20s-7-4.4-7-9.2A3.8 3.8 0 0 1 12 7.5a3.8 3.8 0 0 1 7 3.3C19 15.6 12 20 12 20z" />
+              </svg>
+              <span class="badge" id="wish-count" hidden>0</span>
+            </button>
+            <button class="icon-btn bag-btn" data-open="cart" aria-label="Bag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M6 8h12l-1 12H7L6 8z" />
+                <path d="M9 8V6.5A3 3 0 0 1 12 3.5a3 3 0 0 1 3 3V8" />
+              </svg>
+              <span class="badge" id="cart-count" hidden>0</span>
+            </button>
+            <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Menu">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="crumb" id="crumb">
+          <button data-nav="home">Home page</button>
+          <span>→</span>
+          <button data-nav="men">Men</button>
+          <span>→</span>
+          <span>Shoes</span>
+        </div>
+
+        <div class="title-row">
+          <h1 id="page-title">Men's Trainers &amp; Shoes</h1>
+          <div class="results">
+            <span id="results-label">Men's Trainers &amp; Shoes</span>
+            <span id="results-count">— 0 results</span>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="filter-item">
+            <label class="sr-only" for="type-filter">Type</label>
+            <select id="type-filter">
+              <option value="all">All</option>
+              <option value="running">Running</option>
+              <option value="basketball">Basketball</option>
+              <option value="lifestyle">Lifestyle</option>
+              <option value="trail">Trail</option>
+            </select>
+          </div>
+
+          <div class="filter-item slider-item">
+            <label for="size-filter"><span>EU</span> <strong id="size-value">45</strong></label>
+            <input id="size-filter" type="range" min="35" max="47" value="45" />
+          </div>
+
+          <div class="filter-item slider-item">
+            <label for="price-filter">Under $<strong id="price-value">799.00</strong></label>
+            <input id="price-filter" type="range" min="200" max="799" value="799" step="10" />
+          </div>
+
+          <div class="filter-item">
+            <label class="sr-only" for="sale-filter">On sale</label>
+            <select id="sale-filter">
+              <option value="all">On sale: All</option>
+              <option value="yes">On sale: Yes</option>
+              <option value="no">On sale: No</option>
+            </select>
+          </div>
+
+          <div class="filters-spacer"></div>
+
+          <button class="filter-text" data-open="filters">Open filter +</button>
+
+          <div class="filter-item">
+            <label class="sr-only" for="sort-filter">Sort</label>
+            <select id="sort-filter">
+              <option value="latest">Latest</option>
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low–High</option>
+              <option value="price-desc">Price: High–Low</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="grid" id="grid" aria-live="polite"></section>
+
+        <footer class="footer">
+          <p>KROSS © 2026. Сайт сделан для примера моих работ.</p>
+          <div>
+            <button class="text-btn" data-open="help">Help</button>
+            <button class="text-btn" data-open="join">Join Us</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div class="overlay" id="search-overlay" hidden>
+      <div class="search-panel">
+        <input id="search-input" type="search" placeholder="Search KROSS" autocomplete="off" />
+        <button class="text-btn" data-close="search">Close</button>
+      </div>
+    </div>
+
+    <aside class="drawer" id="filter-drawer" hidden>
+      <div class="drawer-head">
+        <h2>Filter</h2>
+        <button class="text-btn" data-close="filters">Close</button>
+      </div>
+      <div class="drawer-body">
+        <fieldset>
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender-extra" value="all" checked /> All</label>
+          <label><input type="radio" name="gender-extra" value="men" /> Men</label>
+          <label><input type="radio" name="gender-extra" value="women" /> Women</label>
+          <label><input type="radio" name="gender-extra" value="kids" /> Kids</label>
+        </fieldset>
+        <fieldset>
+          <legend>Sport</legend>
+          <label><input type="checkbox" name="sport-extra" value="running" /> Running</label>
+          <label><input type="checkbox" name="sport-extra" value="basketball" /> Basketball</label>
+          <label><input type="checkbox" name="sport-extra" value="lifestyle" /> Lifestyle</label>
+          <label><input type="checkbox" name="sport-extra" value="trail" /> Trail</label>
+        </fieldset>
+        <button class="primary-btn" id="apply-filters">Apply</button>
+        <button class="text-btn" id="reset-filters">Clear all</button>
+      </div>
+    </aside>
+
+    <aside class="drawer" id="cart-drawer" hidden>
+      <div class="drawer-head">
+        <h2>Bag</h2>
+        <button class="text-btn" data-close="cart">Close</button>
+      </div>
+      <div class="drawer-body" id="cart-body"></div>
+    </aside>
+
+    <aside class="drawer" id="wish-drawer" hidden>
+      <div class="drawer-head">
+        <h2>Favourites</h2>
+        <button class="text-btn" data-close="wishlist">Close</button>
+      </div>
+      <div class="drawer-body" id="wish-body"></div>
+    </aside>
+
+    <div class="modal" id="auth-modal" hidden>
+      <div class="modal-card">
+        <button class="text-btn modal-close" data-close="auth">Close</button>
+        <h2 id="auth-title">Sign In</h2>
+        <form id="auth-form">
+          <label>Email<input type="email" required placeholder="you@kross.com" /></label>
+          <label>Password<input type="password" required minlength="6" placeholder="••••••••" /></label>
+          <button class="primary-btn" type="submit">Continue</button>
+        </form>
+        <p class="fine" id="auth-switch"></p>
+      </div>
+    </div>
+
+    <div class="modal" id="help-modal" hidden>
+      <div class="modal-card">
+        <button class="text-btn modal-close" data-close="help">Close</button>
+        <h2>Help</h2>
+        <p>Сайт сделан для примера моих работ. Заказы не обрабатываются.</p>
+        <p>Orders ship in 2–4 days. Free returns within 30 days. Sizes are EU.</p>
+        <p>Write to <a href="mailto:help@kross.store">help@kross.store</a> or use live chat weekdays 10–19.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="promo-modal" hidden>
+      <div class="modal-card">
+        <button class="text-btn modal-close" data-close="promo">Close</button>
+        <h2>The Kross Apex</h2>
+        <p>Knit upper. Mint cushioning. Built for indoor courts and the walk home.</p>
+        <button class="primary-btn" id="shop-apex">Shop Apex</button>
+      </div>
+    </div>
+
+    <div class="modal" id="product-modal" hidden>
+      <div class="modal-card product-card-modal">
+        <button class="text-btn modal-close" data-close="product">Close</button>
+        <div class="product-modal-grid" id="product-detail"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

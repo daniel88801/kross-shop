@@ -1,0 +1,8 @@
+node_modules/
+screenshots/
+kross-phone.html
+bundle-phone.js
+open-firewall.bat
+verify.mjs
+package-lock.json
+.DS_Store
